@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />
+
+    <title>CRUD</title>
+
+
+</head>
+
+<body onload="listar()">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Documento</label>
+                    <input type="text" class="form-control" id="txtDocumento">
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Nome</label>
+                    <input type="text" class="form-control" id="txtNome">
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" id="txtEmail">
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Cor</label>
+                    <input type="color" class="form-control" id="txtCor">
+                </div>
+
+            </div>
+            <input type="hidden" id="txtId">
+            <div class="col-12">
+                <button id = "btnSalvar" type="button" class="btn btn-success float-right" onclick="salvar()">Salvar</button>
+                <button id="btnEditar" style="display:none" type="button" class="btn btn-warning float-right" onclick="modificar()">Editar</button>
+
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Documento</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Cor</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody id="tblDados">
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+     <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+
+</html>
